@@ -109,6 +109,7 @@ function validateForm() {
 
     if (lastName == "") {
         alert("Debes escribir los apellidos");
+        return false;
     }
 
     if (run == "") {
@@ -118,6 +119,7 @@ function validateForm() {
 
     if (email == "") {
         alert("Debes escribir el correo electrónico");
+        return false;
     }
 
     else if (!email.includes("@")) {
@@ -171,10 +173,10 @@ function AddData() {
         }
 
         peopleList.push({
-            firstName : firstName,
-            lastName : lastName,
-            run : run,
-            email : email,
+            firstName: firstName,
+            lastName: lastName,
+            run: run,
+            email: email,
         });
 
         localStorage.setItem("peopleList", JSON.stringify(peopleList));
@@ -183,11 +185,13 @@ function AddData() {
         document.getElementById("lastName").value = "";
         document.getElementById("run").value = "";
         document.getElementById("email").value = "";
+
+        alert("El postulante ha sido agregado");
     }
 }
 
 // Para eliminar datos
-function deleteData(index){
+function deleteData(index) {
     var peopleList;
     if (localStorage.getItem("peopleList") == null) {
         peopleList = [];
@@ -198,10 +202,12 @@ function deleteData(index){
     peopleList.splice(index, 1);
     localStorage.setItem("peopleList", JSON.stringify(peopleList));
     showData();
+
+    alert("El postulante ha sido eliminado");
 }
 
 // Para actualizar la información (Lo que falta por completar)
-function updateData(index){
+function updateData(index) {
     document.getElementById("Submit").style.display = "none";
     document.getElementById("Update").style.display = "block";
 
@@ -217,8 +223,8 @@ function updateData(index){
     document.getElementById("run").value = peopleList[index].run;
     document.getElementById("email").value = peopleList[index].email;
 
-    document.querySelector("#Update").onclick = function(){
-        if(validateForm() == true){
+    document.querySelector("#Update").onclick = function () {
+        if (validateForm() == true) {
             peopleList[index].firstName = document.getElementById("firstName").value;
             peopleList[index].lastName = document.getElementById("lastName").value;
             peopleList[index].run = document.getElementById("run").value;

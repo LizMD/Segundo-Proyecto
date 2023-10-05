@@ -37,7 +37,7 @@
                     <h2 class="titulo2">Recursos Humanos <strong>FP</strong></h1>
                 </div>
                 <div class="container">
-                    <div class="main row justify-content-center">
+                    <div class="row justify-content-center">
                         <form action="" id="worker-form" class="row justify-content-center mb-4" autocomplete="off">
                             <div class="col-10 col-md-8 mb-3">
                                 <label for="firstName" class="form-label">Nombres</label>
@@ -56,7 +56,8 @@
                                 <input type="text" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
                             </div>
                             <div class="col-10 col-md-8">
-                                <button class="btn btn-success" id="submit" onclick="AddData()">Agregar</button>
+                                <button class="btn btn-success" id="Submit" onclick="AddData()">Agregar</button>
+                                <button class="btn btn-primary" id="Update">Actualizar</button>
                             </div>
                         </form>
                         <div class="col-12 col-md-10 mt-5">
@@ -70,7 +71,7 @@
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
-                                <tbody id="worker-list"></tbody>
+                                <tbody></tbody>
                             </table>
                         </div>
                     </div>
