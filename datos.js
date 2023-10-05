@@ -109,7 +109,7 @@ function deleteData(index) {
     alert("El postulante ha sido eliminado");
 }
 
-// Para actualizar la información (Lo que falta por completar)
+// Para actualizar la información
 function updateData(index) {
     document.getElementById("Submit").style.display = "none";
     document.getElementById("Update").style.display = "block";
@@ -144,6 +144,8 @@ function updateData(index) {
 
             document.getElementById("Submit").style.display = "block";
             document.getElementById("Update").style.display = "none";
+
+            alert("El postulante ha sido editado");
         }
     }
 }
