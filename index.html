@@ -41,26 +41,26 @@
                         <form action="" id="worker-form" class="row justify-content-center mb-4" autocomplete="off">
                             <div class="col-10 col-md-8 mb-3">
                                 <label for="firstName" class="form-label">Nombres</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Nombres">
+                                <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Nombres">
                             </div>
                             <div class="col-10 col-md-8 mb-3">
                                 <label for="lastName" class="form-label">Apellidos</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Apellidos">
+                                <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Apellidos">
                             </div>
                             <div class="col-10 col-md-8 mb-3">
                                 <label for="run" class="form-label">RUN</label>
-                                <input type="number" class="form-control" id="run" placeholder="RUN">
+                                <input type="text" name="run" class="form-control" id="run" placeholder="RUN">
                             </div>
                             <div class="col-10 col-md-8 mb-3">
                                 <label for="yourEmail" class="form-label">Correo Electrónico</label>
-                                <input type="text" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                                <input type="text" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
                             </div>
                             <div class="col-10 col-md-8">
-                                <input class="btn btn-success add-btn" type="submit" value="Agregar">
+                                <button class="btn btn-success" id="submit" onclick="AddData()">Agregar</button>
                             </div>
                         </form>
                         <div class="col-12 col-md-10 mt-5">
-                            <table class="table table-sm table-dark">
+                            <table class="table table-sm table-dark" id="crudTable">
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -70,18 +70,7 @@
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
-                                <tbody id="worker-list">
-                                    <tr>
-                                        <td>María Ana</td>
-                                        <td>Delgado Durán</td>
-                                        <td>267433143</td>
-                                        <td>lizath09@gmail.com</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning btn-sm edit">Editar</a>
-                                            <a href="#" class="btn btn-danger btn-sm delete">Eliminar</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                <tbody id="worker-list"></tbody>
                             </table>
                         </div>
                     </div>
